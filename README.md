@@ -13,7 +13,7 @@ This sample uses chargable services and **will** incur costs for the time the se
 
 ## Configuration 
 
-The following variables need to be set in the `terraform.tfvars` file before use
+The following variables need to be set before use
 
 * `softlayer_username` is an Infrastructure user name. Go to https://control.bluemix.net/account/user/profile, scroll down, and check API Username.
 * `softlayer_api_key` is an Infrastructure API Key. Go to https://control.bluemix.net/account/user/profile, scroll down, and check Authentication Key.
