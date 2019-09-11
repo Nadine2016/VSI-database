@@ -3,9 +3,9 @@
 ########################################################
 
 resource "ibm_compute_vm_instance" "webapp1" {
-  domain                     = "wcpclouduk.com"
+  domain                     = "${var.domain}"
   datacenter                 = "lon06"
-  hostname                   = "webapp1"
+  hostname                   = "${var.hostname}"
   count                      = 1
   os_reference_code          = "CENTOS_LATEST_64"
   flavor_key_name            = "C1_1X1X25"

@@ -1,9 +1,9 @@
 variable "softlayer_username" {
-  description = "Enter your IBM Infrastructure (SoftLayer) full username, you can get this using: https://control.bluemix.net/account/user/profile"
+  description = "Enter your IBM Infrastructure (SoftLayer) full username, you can get this using: https://cloud.ibm.com/iam/users/"
 }
 
 variable "softlayer_api_key" {
-  description = "Enter your IBM Infrastructure (SoftLayer) API key, you can get this using: https://control.bluemix.net/account/user/profile"
+  description = "Enter your IBM Infrastructure (SoftLayer) API key, you can get this using: https://cloud.ibm.com/iam/users/"
 }
 
 variable "ibmcloud_api_key" {
