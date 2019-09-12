@@ -27,7 +27,25 @@ The example is deployed in the eu-gb region. The `region` parameter in provider.
 |Variable Name|Description|Default Value|
 |-------------|-----------|-------------|
 |hostname| The hostname of the virtual machine|webapp1| 
-|domain |  The domain of the virtual machine|test.com|
+|domain | The domain of the virtual machine|test.com|
+|datacenter | The datacenter on which to provision VSI|lon06|
+|os-reference-code | The OS type of the virtual machine|CENTOS_LATEST_64|
+|flavor | The flavor type of the virtual machine|C1_1X1X25|
+|resource-group | The resource group of the account in which services will be deployed|Default|
+|resource-instance-name | The unique name for the database instance|demo-postgres|
+|database-service-name | The service name of the database|databases-for-postgresql|
+|database-service-plan | The service plan of the database|standard|
+|location | The location where to deploy the service. The region and location should match to same|eu-gb|
+|admin-password| The default password for admin user||
+|members-memory-allocation-mb| The memory size for the database, split across all members|3072|
+|members-disk-allocation-mb| The disk size of the database, split across all members|20480|
+|db-user-name| The new database username|user123|
+|db-user-password| The new database user password||
+
+**Note** More information of above resources can be found here  
+https://ibm-cloud.github.io/tf-ibm-docs/v0.17.3/r/database.html  
+https://ibm-cloud.github.io/tf-ibm-docs/v0.17.3/r/compute_vm_instance.html
+
 
 ## Outputs 
 
