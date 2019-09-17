@@ -9,7 +9,7 @@ This sample uses chargeable services and you are charged for the time the servic
 
 ## Dependencies
 
-- The user must have IAM access to create and configure an IBM Cloud database instance and VSIs.
+The user must have IAM access to create and configure an IBM Cloud database instance and VSIs.
 
 ## Configuring your deployment values  
 
