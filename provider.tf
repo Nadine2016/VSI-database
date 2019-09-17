@@ -1,5 +1,5 @@
 variable "softlayer_username" {
-  description = "Enter your classic infrastructure user name. Go to https://cloud.ibm.com/iam/users/, select your name, and get your user name from the VPN password section."
+  description = "Enter your classic infrastructure user name. Go to https://cloud.ibm.com/iam/users/, select your name, and find your user name in the VPN password section."
 }
 
 variable "softlayer_api_key" {
