@@ -5,7 +5,7 @@ variable "hostname" {
 
 variable "domain" {
    default = "domain.dev"
-   description = "The domain for the virtual server instance, for example, domain.dev."
+   description = "The domain for the virtual machine, for example, domain.dev."
 }
 
 variable "datacenter" {
