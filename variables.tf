@@ -2,8 +2,9 @@ variable "hostname" {
    default = "webapp1"
    description = "The hostname for the instance, for example, vm1."
 }
+
 variable "domain" {
-   default = "test.com"
+   default = "domain.dev"
    description = "The domain for the instance, for example, domain.dev."
 }
 
@@ -24,7 +25,6 @@ variable "flavor" {
 
 
 variable "resource-group" {
-   default = "Default"
    description = "The resource group of the account where services are deployed." 
 }
 

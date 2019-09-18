@@ -29,11 +29,11 @@ You must also set the following deployment values on the Create page. You can en
 |Variable Name|Description|Default Value|
 |-------------|-----------|-------------|
 |hostname| The hostname for the virtual machine, for example, vm1.|webapp1| 
-|domain | The domain for the virtual machine, for example, domain.dev.|test.com|
+|domain | The domain for the virtual machine, for example, domain.dev.|domain.dev|
 |datacenter | The data center to create the VSI, for example, dal13. To get a list of all data centers, run the ic sl vs options command.|lon06|
 |os-reference-code | The OS type of the virtual machine.|CENTOS_LATEST_64|
 |flavor | The flavor type of the virtual machine.|C1_1X1X25|
-|resource-group | The resource group of the account where services are deployed.|Default|
+|resource-group | The resource group of the account where services are deployed.||
 |resource-instance-name | The unique name for the database instance.|demo-postgres|
 |database-service-name | The service name of the database.|databases-for-postgresql|
 |database-service-plan | The service plan of the database.|standard|
