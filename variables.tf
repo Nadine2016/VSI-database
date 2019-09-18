@@ -49,7 +49,7 @@ variable "location" {
 }
 
 variable "admin-password" {
-   description = "Enter a password for the database administrator."
+   description = "Enter a password for the database administrator. The password must be between 10-32 characters."
 }
 
 variable "members-memory-allocation-mb"{
