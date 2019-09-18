@@ -2,7 +2,7 @@ variable "hostname" {
    default = "webapp1"
 }
 variable "domain" {
-   default = "test.com"
+   default = "domain.dev"
 }
 
 variable "datacenter" {
@@ -19,7 +19,6 @@ variable "flavor" {
 
 
 variable "resource-group" {
-   default = "Default"
 }
 
 variable "resource-instance-name" {
