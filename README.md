@@ -1,4 +1,4 @@
-# This example shows how to create an IBM Cloud Database and configure connectivity from a VSI
+# VSI-database template
 
 This sample template configures an IBM Cloud database instance and virtual server instances (VSI). Security groups are configured so that the VSI can access the IBM Cloud database instance on the IBM Cloud database instance connection port, which is dynamically defined. Whitelisting is configured on the IBM Cloud database instance to allow access only from the VSI IP address. 
 
