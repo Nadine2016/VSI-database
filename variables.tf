@@ -49,7 +49,6 @@ variable "location" {
 }
 
 variable "admin-password" {
-   default = ""
    description = "The default password for the admin user."
 }
 
@@ -71,6 +70,5 @@ variable "db-user-name"{
 }
 
 variable "db-user-password"{
-  default = "" 
   description = "The new database user name."
 }
