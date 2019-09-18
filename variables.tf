@@ -25,7 +25,7 @@ variable "flavor" {
 
 variable "resource-group" {
    default = "Default"
-   description = "The resource group of the account where services are deployed" 
+   description = "The resource group of the account where services are deployed." 
 }
 
 variable "resource-instance-name" {
