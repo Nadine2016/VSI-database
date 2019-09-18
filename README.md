@@ -38,7 +38,7 @@ You must also set the following deployment values on the Create page. You can en
 |database-service-name | The service name of the database.|databases-for-postgresql|
 |database-service-plan | The service plan of the database.|standard|
 |location | The location in which to deploy the instance. The region and location must match.|eu-gb|
-|admin-password| The default password for the admin user.||
+|admin-password| Enter a password for the database administrator.||
 |members-memory-allocation-mb| The memory size for the database that's split across all members.|3072|
 |members-disk-allocation-mb| The disk size of the database that's split across all members.|20480|
 |db-user-name| The new database user name.|user123|
