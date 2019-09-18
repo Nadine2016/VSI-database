@@ -19,7 +19,6 @@ variable "flavor" {
 
 
 variable "resource-group" {
-   default = "Default"
 }
 
 variable "resource-instance-name" {
