@@ -49,7 +49,7 @@ variable "location" {
 }
 
 variable "admin-password" {
-   description = "The default password for the admin user."
+   description = "Enter a password for the database administrator."
 }
 
 variable "members-memory-allocation-mb"{
@@ -70,5 +70,4 @@ variable "db-user-name"{
 }
 
 variable "db-user-password"{
-  description = "The new database user name."
-}
+  description = "The new database user password." 
