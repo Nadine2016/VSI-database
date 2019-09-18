@@ -1,15 +1,15 @@
 # VSI-database template
 
-This sample template configures an IBM Cloud database instance and virtual server instances (VSI). Security groups are configured so that the VSI can access the IBM Cloud database instance on the IBM Cloud database instance connection port, which is dynamically defined. Whitelisting is configured on the IBM Cloud database instance to allow access only from the VSI IP address. 
+This sample template configures an IBM Cloud database instance and virtual server instance. Security groups are configured so that the virtual server instance can access the IBM Cloud database instance on the IBM Cloud database instance connection port, which is dynamically defined. Whitelisting is configured on the IBM Cloud database instance to allow access only from the VSI IP address. 
 
 ## Costs
 
-This sample uses chargeable services and you are charged for the time the services are deployed. The use of `terraform destroy` results in deletion of all resources including the IBM Cloud database service instance. Billing for VSI and IBM Cloud database terminates on the hour. 
+This sample uses chargeable services and you are charged for the time the services are deployed. The use of `terraform destroy` results in deletion of all resources including the IBM Cloud database service instance. Billing for virtual server instances and IBM Cloud database terminates on the hour. 
 
 
 ## Dependencies
 
-The user must have IAM access to create and configure an IBM Cloud database instance and VSIs.
+The user must have IAM access to create and configure an IBM Cloud database instance and virtual server instances.
 
 ## Configuring your deployment values  
 
@@ -28,9 +28,9 @@ The example is deployed in the eu-gb region. The `region` parameter in the `prov
 
 |Variable Name|Description|Default Value|
 |-------------|-----------|-------------|
-|hostname| The hostname for the VSI, for example, webapp1.|webapp1| 
-|domain | The domain for the VSI, for example, domain.dev.|domain.dev|
-|datacenter | The data center to create the VSI, for example, dal13. To get a list of all data centers, run the `ic sl vs options` command.|dal13|
+|hostname| The hostname for the virtual machine, for example, webapp1.|webapp1| 
+|domain | The domain for the virtual machine, for example, domain.dev.|domain.dev|
+|datacenter | The data center to create the virtual server instance, for example, dal13. To get a list of all data centers, run the `ic sl vs options` command.|dal13|
 |os-reference-code | The code that is used to provision the computing instance. To view the available OS reference codes, log in to the [IBM Cloud Infrastructure (SoftLayer) API](https://api.softlayer.com/rest/v3/SoftLayer_Virtual_Guest_Block_Device_Template_Group/getVhdImportSoftwareDescriptions.json?objectMask=referenceCode).|CENTOS_LATEST_64|
 |flavor | The flavor type of the VSI.|C1_1X1X25|
 |resource-group | The resource group of the account where services are deployed.||
