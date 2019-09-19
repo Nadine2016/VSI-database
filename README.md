@@ -1,6 +1,6 @@
 # VSI-database
 
-Use this template to provision a classic virtual server instance (VSI) in IBM Cloud that is set up with an IBM Cloud Databases for PostgreSQL instance by using Terraform or IBM Cloud Schematics. The IBM Cloud database service is automatically configured during the installation and a security group is created so that your virtual server instance can connect to the database port. To ensure that your database instance can be accessed by the virtual server instance only, whitelist rules are added to your database instance. 
+Use this template to provision a classic virtual server instance (VSI) in IBM Cloud that is set up with an IBM Cloud Databases for PostgreSQL instance by using Terraform or IBM Cloud Schematics. The IBM Cloud database service is automatically configured during the installation and security groups are created so that your virtual server instance can connect to the database port. To ensure that your database instance can be accessed by the virtual server instance only, whitelist rules are added to your database instance. 
 
 To apply the VSI-database template in IBM Cloud with IBM Cloud Schematics, you must select the template from the [IBM Cloud catalog](cloud.ibm.com/catalog/content/LAMP), enter the configuration for your classic virtual server instance and database service, and install the template. When you install the template, IBM Cloud Schematics creates a workspace and starts provisioning your resources by using Terraform. You can review logs and your resources from the IBM Cloud Schematics console. For more information, see the [IBM Cloud Schematics documentation](https://cloud.ibm.com/docs/schematics?topic=schematics-about-schematics). 
 
@@ -38,12 +38,12 @@ You can also choose to customize the default settings for your classic infrastru
 
 |Variable Name|Description|Default Value|
 |-------------|-----------|-------------|
-|hostname| The hostname for the virtual machine, for example, webapp1.|webapp1| 
-|domain | The domain for the virtual machine, for example, domain.dev.|domain.dev|
-|datacenter | The data center to create the virtual server instance, for example, dal13. To get a list of all data centers, run the `ic sl vs options` command.|dal13|
-|os-reference-code | The code that is used to provision the computing instance. To view the available OS reference codes, log in to the [IBM Cloud Infrastructure (SoftLayer) API](https://api.softlayer.com/rest/v3/SoftLayer_Virtual_Guest_Block_Device_Template_Group/getVhdImportSoftwareDescriptions.json?objectMask=referenceCode).|CENTOS_LATEST_64|
-|flavor | The flavor type of the VSI.|C1_1X1X25|
-|resource-group | The resource group of the account where services are deployed.||
+|hostname| Enter a host name for your classic infrastructure virtual server instance. This host name is used with the `domain` to create the full URL for your classic infrastructure virtual server instance. |webapp1| 
+|domain | Enter the domain name that you want to assign to your classic infrastructure virtual server instance. This domain name is used with the `hostname` to create the full URL for your classic infrastructure virtual server instance.|domain.dev|
+|datacenter | Enter the data center where you want to provision your classic infrastructure virtual server instance. For available data centers, run `ibmcloud sl vs options` and review the values in the **datacenter** field.|dal13|
+|os-reference-code | Enter the reference code of the operating system that you want to install on your virtual server instance. To see available OS reference codes, log in to the [IBM Cloud Infrastructure (SoftLayer) API](https://api.softlayer.com/rest/v3/SoftLayer_Virtual_Guest_Block_Device_Template_Group/getVhdImportSoftwareDescriptions.json?objectMask=referenceCode).|CENTOS_LATEST_64|
+|flavor | Enter the flavor for your classic infrastructure virtual server instance. The flavor determines the type of virtual server instance that you want to create, including available CPU and memory. To find a list of supported flavors, run `ibmcloud sl vs options` and review the values in the **flavors** field. For an overview of what is included in each flavor, see [Public virtual servers](https://cloud.ibm.com/docs/vsi?topic=virtual-servers-about-public-virtual-servers)|C1_1X1X25|
+|resource-group | Enter the name of the IBM Cloud resource group where you want to provision your database instance. To list available resource groups, run `ibmcloud resource groups`. ||
 |resource-instance-name | The unique name for the database instance.|demo-postgres|
 |database-service-name | The service name of the database.|databases-for-postgresql|
 |database-service-plan | The service plan of the database.|standard|
