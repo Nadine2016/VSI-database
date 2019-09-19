@@ -12,7 +12,7 @@ variable "ibmcloud_api_key" {
 
 variable "region" {
    default = "eu-gb"
-   description = "Region for deploying the virtual server instance, for example, eu-gb. To get a list of all regions, run the `ic is regions` command
+   description = "Region for deploying the instance, for example, eu-gb. To get a list of all regions, run the `ic regions` command."
 }
 
 

@@ -71,3 +71,4 @@ variable "db-user-name"{
 
 variable "db-user-password"{
   description = "The new database user password." 
+}
