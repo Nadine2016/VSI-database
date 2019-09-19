@@ -1,15 +1,15 @@
 variable "hostname" {
    default = "webapp1"
-   description = "The hostname for the instance, for example, vm1."
+   description = "The hostname for the instance, for example, webapp1."
 }
 
 variable "domain" {
    default = "domain.dev"
-   description = "The domain for the instance, for example, domain.dev."
+   description = "The domain for the virtual machine, for example, domain.dev."
 }
 
 variable "datacenter" {
-   default = "lon06"
+   default = "dal13"
    description = "The data center to create resources in, for example, dal13. To get a list of all data centers, run the `ic sl vs options` command."
 }
 
@@ -49,7 +49,7 @@ variable "location" {
 }
 
 variable "admin-password" {
-   description = "Enter a password for the database administrator."
+   description = "Enter a password for the database administrator. The password must be between 10-32 characters."
 }
 
 variable "members-memory-allocation-mb"{
