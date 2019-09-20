@@ -12,7 +12,7 @@ variable "ibmcloud_api_key" {
 
 variable "region" {
    default = "eu-gb"
-   description = "Region for deploying the instance, for example, eu-gb. To get a list of all regions, run the `ic regions` command."
+   description = "Enter the IBM Cloud region where you want to deploy your Databases for PostgreSQL service instance. The region must match the value in `location`. To find available regions, run `ibmcloud regions`."
 }
 
 
