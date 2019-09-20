@@ -42,42 +42,19 @@ You can also choose to customize the default settings for your classic infrastru
 |domain | Enter the domain name that you want to assign to your classic infrastructure virtual server instance. This domain name is used with the `hostname` to create the full URL for your classic infrastructure virtual server instance.|domain.dev|
 |datacenter | Enter the data center where you want to provision your classic infrastructure virtual server instance. For available data centers, run `ibmcloud sl vs options` and review the values in the **datacenter** field.|dal13|
 |os-reference-code | Enter the reference code of the operating system that you want to install on your virtual server instance. To see available OS reference codes, log in to the [IBM Cloud Infrastructure (SoftLayer) API](https://api.softlayer.com/rest/v3/SoftLayer_Virtual_Guest_Block_Device_Template_Group/getVhdImportSoftwareDescriptions.json?objectMask=referenceCode).|CENTOS_LATEST_64|
-|flavor | Enter the flavor for your classic infrastructure virtual server instance. The flavor determines the type of virtual server instance that you want to create, including available CPU and memory. To find a list of supported flavors, run `ibmcloud sl vs options` and review the values in the **flavors** field. For an overview of what is included in each flavor, see [Public virtual servers](https://cloud.ibm.com/docs/vsi?topic=virtual-servers-about-public-virtual-servers)|C1_1X1X25|
+|flavor | Enter the flavor for your classic infrastructure virtual server instance. The flavor determines the type of virtual server instance that you want to create, including available CPU and memory. To find a list of supported flavors, run `ibmcloud sl vs options` and review the values in the **flavors** field. For an overview of what is included in each flavor, see [Public virtual servers](https://cloud.ibm.com/docs/vsi?topic=virtual-servers-about-public-virtual-servers).|C1_1X1X25|
 |resource-group | Enter the name of the IBM Cloud resource group where you want to provision your database instance. To list available resource groups, run `ibmcloud resource groups`. ||
-|resource-instance-name | The unique name for the database instance.|demo-postgres|
-|database-service-name | The service name of the database.|databases-for-postgresql|
-|database-service-plan | The service plan of the database.|standard|
-|location | The location in which to deploy the instance. The region and location must match.|eu-gb|
-|admin-password| Enter a password for the database administrator. The password must be between 10-32 characters.||
-|members-memory-allocation-mb| The memory size for the database that's split across all members.|3072|
-|members-disk-allocation-mb| The disk size of the database that's split across all members.|20480|
-|db-user-name| The new database user name.|user123|
-|db-user-password| The new database user password. The password must be between 10-32 characters.||
+|resource-instance-name | Enter a unique name for your Databases for PostgreSQL service instance.|demo-postgres|
+|database-service-name | Enter the name of the database that you set up within your Databases for PostgreSQL service instance. |databases-for-postgresql|
+|database-service-plan | Enter the Databases for PostgreSQL service plan that you want. |standard|
+|region | Enter the IBM Cloud region where you want to deploy your Databases for PostgreSQL service instance. The region must match the value in `location`. To find available regions, run `ibmcloud regions`. |
+|location | Enter the location, in which to deploy the database instance. The location that you choose must match the value in `region`. To find available locations, run `ibmcloud regions`. |eu-gb|
+|members-memory-allocation-mb| Enter the total amount of memory in megabytes that is shared between the database members within the database.|3072|
+|members-disk-allocation-mb| Enter the disk size in megabytes for the database that is shared across all database members. |20480|
+|db-user-name| Enter the user name of a database user that you want to set up. |user123|
 
-**Note** For more information about the deployment values, go to the following pages:
-https://ibm-cloud.github.io/tf-ibm-docs/v0.17.3/r/database.html  
-https://ibm-cloud.github.io/tf-ibm-docs/v0.17.3/r/compute_vm_instance.html
+## Output
 
-
-The example is deployed in the eu-gb region. The `region` parameter in the `provider.tf` file must be set to the same region as the IBM Cloud database instance that it's deployed in, as defined by the `location` parameter on the ibm_database resource.
+When you apply the template and your classic virtual server and database instances are successfully provisioned in IBM Cloud, you see the composed database connection string that you can use to connect to your Databases for PostgreSQL service instance by using the `admin` user. For more information about database connection strings, see [Creating Users and Getting Connection Strings](https://cloud.ibm.com/docs/services/databases-for-etcd?topic=databases-for-etcd-connection-strings#connection-string).
 
 
-## Outputs 
-
-The composed connection string for the default admin ID for the deployed IBM Cloud database PostgreSQL database is displayed. Connection string usage depends on the type of IBM Cloud database service that is deployed. There might be multiple strings for different hosts in the database cluster. See the [IBM Cloud database documentation](https://cloud.ibm.com/docs/services/databases-for-etcd?topic=databases-for-etcd-connection-strings#connection-strings) for information about the use of connection strings.
-
-## Running the configuration 
-```shell
-terraform init
-terraform plan
-```
-
-For apply phase
-
-```shell
-terraform apply
-```
-
-```shell
-terraform destroy
-```  
