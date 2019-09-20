@@ -7,7 +7,7 @@ variable "softlayer_api_key" {
 }
 
 variable "ibmcloud_api_key" {
-  description = "Enter your IBM Cloud API key. If you need to create one, go to the [IBM Cloud API keys page](https://cloud.ibm.com/iam/apikeys)."
+  description = "Enter your IBM Cloud API. To create one, go to the [IBM Cloud API keys page](https://cloud.ibm.com/iam/apikeys)."
 }
 
 variable "region" {
