@@ -69,5 +69,5 @@ variable "db-user-name"{
 }
 
 variable "db-user-password"{
-  description = "The new database user password." 
+  description = "The new database user password. The password must be between 10-32 characters." 
 }
