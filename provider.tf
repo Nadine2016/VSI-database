@@ -1,18 +1,18 @@
 variable "softlayer_username" {
-  description = "Enter your classic infrastructure user name. Go to the [IBM Cloud API keys page](https://cloud.ibm.com/iam/apikeys), and select Details from the Actions menu for your classic infrastructure API key. Then, retrieve your user name."
+  description = "Enter the user name to access IBM Cloud classic infrastructure. You can retrieve the user name by following the instructions for retrieving your classic infrastructure API key. "
 }
 
 variable "softlayer_api_key" {
-  description = "Enter your classic infrastructure API key. Go to the [IBM Cloud API keys page](https://cloud.ibm.com/iam/apikeys) to create one, or get an existing one by selecting Details from the Actions menu for the API key."
+  description = "Enter the API key to access IBM Cloud classic infrastructure. For more information for how to create an API key and retrieve it, see [Managing classic infrastructure API keys](https://cloud.ibm.com/docs/iam?topic=iam-classic_keys). "
 }
 
 variable "ibmcloud_api_key" {
-  description = "Enter your IBM Cloud API key. If you need to create one, go to the [IBM Cloud API keys page](https://cloud.ibm.com/iam/apikeys)."
+  description = "Enter your IBM Cloud API. To create one, go to the [IBM Cloud API keys page](https://cloud.ibm.com/iam/apikeys)."
 }
 
 variable "region" {
    default = "eu-gb"
-   description = "Region for deploying the instance, for example, eu-gb. To get a list of all regions, run the `ic regions` command."
+   description = "Enter the IBM Cloud region where you want to deploy your Databases for PostgreSQL service instance. The region must match the value in `location`. To find available regions, run `ibmcloud regions`."
 }
 
 
