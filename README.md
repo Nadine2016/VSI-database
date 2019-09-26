@@ -28,11 +28,9 @@ Before you can apply the template in IBM Cloud, you must have the following perm
 
 When you select the VSI-database template from the IBM Cloud catalog, you must enter the following values before you can apply the template: 
 
-* `softlayer_api_key`: Enter the API key to access IBM Cloud classic infrastructure. For more information for how to create an API key and retrieve it, see [Managing classic infrastructure API keys](https://cloud.ibm.com/docs/iam?topic=iam-classic_keys). 
-* `softlayer_username`: Enter the user name to access IBM Cloud classic infrastructure. You can retrieve the user name by following the instructions for retrieving your classic infrastructure API key. 
-* `ibmcloud_api_key`: Enter your IBM Cloud API. To create one, go to the [IBM Cloud API keys page](https://cloud.ibm.com/iam/apikeys).
 * `admin-password`: Enter a password for the database administrator. The password must be between 10-32 characters.
 * `db-user-password`: Enter a password for the database user that you want to set up. The password must be between 10-32 characters.
+* `resource-group`: Enter the name of the IBM Cloud resource group where you want to provision your database instance. To list available resource groups, run `ibmcloud resource groups`. 
 
 You can also choose to customize the default settings for your classic infrastructure virtual server or database instance: 
 
@@ -43,7 +41,6 @@ You can also choose to customize the default settings for your classic infrastru
 |datacenter | Enter the data center where you want to provision your classic infrastructure virtual server instance. For available data centers, run `ibmcloud sl vs options` and review the values in the **datacenter** field.|dal13|
 |os-reference-code | Enter the reference code of the operating system that you want to install on your virtual server instance. To see available OS reference codes, log in to the [IBM Cloud Infrastructure (SoftLayer) API](https://api.softlayer.com/rest/v3/SoftLayer_Virtual_Guest_Block_Device_Template_Group/getVhdImportSoftwareDescriptions.json?objectMask=referenceCode).|CENTOS_LATEST_64|
 |flavor | Enter the flavor for your classic infrastructure virtual server instance. The flavor determines the type of virtual server instance that you want to create, including available CPU and memory. To find a list of supported flavors, run `ibmcloud sl vs options` and review the values in the **flavors** field. For an overview of what is included in each flavor, see [Public virtual servers](https://cloud.ibm.com/docs/vsi?topic=virtual-servers-about-public-virtual-servers).|C1_1X1X25|
-|resource-group | Enter the name of the IBM Cloud resource group where you want to provision your database instance. To list available resource groups, run `ibmcloud resource groups`. ||
 |resource-instance-name | Enter a unique name for your Databases for PostgreSQL service instance.|demo-postgres|
 |database-service-name | Enter the name of the database that you set up within your Databases for PostgreSQL service instance. |databases-for-postgresql|
 |database-service-plan | Enter the Databases for PostgreSQL service plan that you want. |standard|
